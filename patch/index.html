@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Hynse - เซิร์ฟเวอร์ SMP ที่เป็นกันเอง</title>
+    <meta name="twitter:image" content="assets/img/wawgafgag.png">
+    <meta name="theme-color" content="#ffb5fd">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="นี้เป็นเซิร์ฟเวอร์ SMP ที่เน้นอิสระให้ผู้เล่นตามที่ต้องการและวานิลลา
+">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="Hynse - เซิร์ฟเวอร์ SMP ที่เป็นกันเอง">
+    <meta name="twitter:description" content="นี้เป็นเซิร์ฟเวอร์ SMP ที่เน้นอิสระให้ผู้เล่นตามที่ต้องการและวานิลลา
+">
+    <meta property="og:image" content="assets/img/wawgafgag.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/logopurpur.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr&amp;subset=thai&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css">
+    <link rel="stylesheet" href="assets/css/nav2.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="font-family: Mitr, sans-serif;background: url(&quot;assets/img/haw.png&quot;) center / auto repeat;">
+    <nav class="navbar navbar-light navbar-expand-md py-3" style="background: linear-gradient(#000000ae, #000000ae), url(&quot;assets/img/14104498-stone_l.webp&quot;) center / contain repeat;">
+        <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" data-aos="fade" data-aos-duration="900" data-aos-delay="250" href="https://hynse.ga" style="padding: 0px;padding-bottom: 0px;margin-right: 141px;"><img class="justify-content-md-center" src="assets/img/wadwaf.png" style="width: 98px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-4"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon" style="width: 42px;height: 42px;"></span></button>
+            <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-4">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://hynse.ga/guideline">ข้อบังคับ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://hynse.ga/plugins">ส่วนเสริม</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://hynse.ga/mapgame">แผนที่</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://hynse.ga/stats">สถิติ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://hynse.ga/patch">อัพเดต</a></li>
+                </ul>
+            </div>
+            <div class="d-none d-md-block"><a class="btn btn-primary btn-lg me-2" role="button" href="https://hynse.ga/join" style="border-radius: 0px;background: rgb(170,133,190);border-style: none;border-top: 5px solid rgb(198,166,215);border-bottom: 5px solid rgb(110,80,126);box-shadow: 2px 4px 0px rgba(0,0,0,0.54);padding-right: 7px;padding-left: 6px;padding-top: 0px;padding-bottom: 0px;width: 69.0312px;">วิธีเข้า</a><a class="btn btn-primary btn-lg me-2" role="button" href="https://hynse.ga/supporter" style="border-radius: 0px;background: rgb(170,133,190);border-style: none;border-top: 5px solid rgb(198,166,215);border-bottom: 5px solid rgb(110,80,126);box-shadow: 2px 4px 0px rgba(0,0,0,0.54);padding-right: 7px;padding-left: 6px;padding-top: 0px;padding-bottom: 0px;width: 87.0312px;">สนับสนุน</a></div>
+        </div>
+    </nav>
+    <div class="container py-4 py-xl-5" style="background: #ffffff;margin-bottom: 30px;box-shadow: 8px 8px rgba(0,0,0,0.31);margin-top: 73px;">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h4 class="text-start">ยังไม่ได้ทำขกตอนใช้อันนี้ไปก่อน</h4>
+            <p class="w-lg-50" style="text-align: left;">- <a href="https://hynse.xyz/patch/1/">patch 1</a> (14/12/2022)<br>-&nbsp;<a href="https://hynse.xyz/patch/2/"><span style="color: var(--bs-link-color);">patch 2</span></a>&nbsp;(20/12/2022)<br>-&nbsp;<a href="https://hynse.xyz/patch/3/"><span style="color: var(--bs-link-color);">patch 3</span></a>&nbsp;(30/12/2022)<br></p>
+        </div>
+        <div class="col-md-8 col-xl-6 text-center mx-auto" style="padding-top: 24px;">
+            <h4 class="text-start">คำสั่ง</h4>
+            <div class="table-responsive text-center">
+                <table class="table table-striped table-striped-columns table-bordered">
+                    <thead class="caption-top">
+                        <tr>
+                            <th>Command</th>
+                            <th>Player</th>
+                            <th>Support</th>
+                            <th>อธิบาย</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>/info</td>
+                            <td>✅</td>
+                            <td>✅<br></td>
+                            <td>แสดงข้อมูลเซิร์ฟเวอร์</td>
+                        </tr>
+                        <tr>
+                            <td>/co (near/lookup)</td>
+                            <td>✅<br></td>
+                            <td>✅<br></td>
+                            <td>เช็คประวัติของบล็อกและอื่นๆ</td>
+                        </tr>
+                        <tr>
+                            <td>/glow</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>สามารถตั้งค่าเลือกสีเรืองแสงได้แต่จะเรืองไม่ทะลุบล็อค</td>
+                        </tr>
+                        <tr>
+                            <td>/joinmsg (ข้อความ)<br></td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>สร้างข้อความพิเศษเมื่อเข้าเกม</td>
+                        </tr>
+                        <tr>
+                            <td>/leavemsg (ข้อความ)</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>สร้างข้อความพิเศษเมื่อเข้าออกเกม<br></td>
+                        </tr>
+                        <tr>
+                            <td>/map (show/hide)</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>แสดงหรือซ่อนตัวเองออกจากแผนที่ในเว็บ</td>
+                        </tr>
+                        <tr>
+                            <td>/msg (ผู้เล่น) (ข้อความ)</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>ส่งข้อความส่วนตัวให้ผู้เล่นอื่นสามารถส่งข้ามเซิร์ฟเวอร์ได้</td>
+                        </tr>
+                        <tr>
+                            <td>/r&nbsp;(ข้อความ)<br></td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>ตอบกลับข้อความส่วนตัวล่าสุด</td>
+                        </tr>
+                        <tr>
+                            <td>/server (เซิร์ฟเวอร์)</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>สลับไปเซิร์ฟเวอร์อื่นๆ</td>
+                        </tr>
+                        <tr>
+                            <td>/rep</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>เช็คค่า Reputation ของตัวเอง</td>
+                        </tr>
+                        <tr>
+                            <td>/rep (ผู้เล่น)</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>เช็คค่า Reputation ของผู้เล่นอื่น<br></td>
+                        </tr>
+                        <tr>
+                            <td>/rep (ผู้เล่น) (+/-) (เหตุผล)</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>ให้ค่า Reputation ผู้เล่นอื่น<br></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-8 col-xl-6 text-center mx-auto" style="padding-top: 48px;">
+            <h2>ตั้งค่าเซิร์ฟเวอร์ (for nerd)</h2>
+            <p class="text-start w-lg-50" style="text-align: left;"><strong>Redstone</strong>&nbsp;ALTERNATE_CURRENT<br><strong>Tick inactive villagers</strong> false<br><strong>Update pathfinding on block update</strong> false<br></p>
+            <h4 style="padding-top: 10px;">Distance</h4>
+            <div class="table-responsive text-center">
+                <table class="table table-striped table-striped-columns table-bordered">
+                    <caption class="caption-top">ระยะใน Chunk<br></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>World</th>
+                            <th>Nether</th>
+                            <th>The End</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>view</td>
+                            <td>32</td>
+                            <td>6</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>simulation</td>
+                            <td>8</td>
+                            <td>6</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>mob-spawn</td>
+                            <td>8</td>
+                            <td>6</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4 style="padding-top: 10px;">Despawn ranges</h4>
+            <div class="table-responsive text-center">
+                <table class="table table-striped table-striped-columns table-sm table-bordered">
+                    <caption class="caption-top">ระยะในบล็อค<br></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>World<br>Soft</th>
+                            <th>World<br>Hard</th>
+                            <th>Nether<br>Soft</th>
+                            <th><strong>Nether</strong><br><strong>Hard</strong><br></th>
+                            <th>End<br>Soft</th>
+                            <th><strong>End</strong><br>Hard</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>monster</td>
+                            <td>32</td>
+                            <td>128</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>creature</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30<br></td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>water<br>creature</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>axolotls</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>water<br>ambient</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>underground<br>water<br>creature</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>ambient</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>misc</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                            <td>30</td>
+                            <td>56</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4 style="padding-top: 52px;">Spawn limits</h4>
+            <div class="table-responsive text-center">
+                <table class="table table-striped table-striped-columns table-sm table-bordered">
+                    <caption class="caption-top">จำนวน&nbsp;entity</caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>World<br></th>
+                            <th><strong>Nether</strong><br></th>
+                            <th><strong>End</strong><br></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>monster</td>
+                            <td>42</td>
+                            <td>32</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>creature</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>water<br>creature</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>axolotls</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>water<br>ambient</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>underground<br>water<br>creature</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>ambient</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4 style="padding-top: 52px;">Spawn Tick rate</h4>
+            <div class="table-responsive text-center">
+                <table class="table table-striped table-striped-columns table-sm table-bordered">
+                    <caption class="caption-top">ระยะใน tick<br></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>World<br></th>
+                            <th><strong>Nether</strong><br></th>
+                            <th><strong>End</strong><br></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>monster</td>
+                            <td>1</td>
+                            <td>1<br></td>
+                            <td>1<br></td>
+                        </tr>
+                        <tr>
+                            <td>creature</td>
+                            <td>400</td>
+                            <td>400<br></td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>water<br>creature</td>
+                            <td>400</td>
+                            <td>400</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>axolotls</td>
+                            <td>400</td>
+                            <td>400</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>water<br>ambient</td>
+                            <td>400</td>
+                            <td>400</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>underground<br>water<br>creature</td>
+                            <td>400</td>
+                            <td>400</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>ambient</td>
+                            <td>400</td>
+                            <td>400</td>
+                            <td>400</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4 style="padding-top: 52px;">Entity range</h4>
+            <div class="table-responsive text-center">
+                <table class="table table-striped table-striped-columns table-sm table-bordered">
+                    <caption class="caption-top">ระยะใน บล็อค<br></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Activation<br></th>
+                            <th>Tracking</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>animals</td>
+                            <td>16</td>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td>monsters</td>
+                            <td>32</td>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td>raiders</td>
+                            <td>48</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>water</td>
+                            <td>8</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>villagers</td>
+                            <td>16</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>flying monsters</td>
+                            <td>48</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>misc<br></td>
+                            <td>8</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>player</td>
+                            <td>-</td>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td>other</td>
+                            <td>-</td>
+                            <td>64</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4 style="padding-top: 52px;">Entity Wake up inactive</h4>
+            <div class="table-responsive text-center">
+                <table class="table table-striped table-striped-columns table-sm table-bordered">
+                    <caption class="caption-top">ระยะใน tick<br></caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Every<br></th>
+                            <th>For</th>
+                            <th>Max/tick</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>animals</td>
+                            <td>1200</td>
+                            <td>40</td>
+                            <td>-<br></td>
+                        </tr>
+                        <tr>
+                            <td>monsters</td>
+                            <td>60</td>
+                            <td>400</td>
+                            <td>4<br></td>
+                        </tr>
+                        <tr>
+                            <td>villagers</td>
+                            <td>20</td>
+                            <td>600</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>flying-monsters</td>
+                            <td>60</td>
+                            <td>200</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4 style="padding-top: 59px;">Villager tick</h4>
+            <div class="table-responsive text-center">
+                <table class="table table-striped table-striped-columns table-bordered">
+                    <caption class="caption-top">ระยะใน tick<br></caption>
+                    <thead>
+                        <tr>
+                            <th>Tick</th>
+                            <th>behavior<br></th>
+                            <th>sensor<br></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>acquirepoi<br></td>
+                            <td>120</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>validatenearbypoi</td>
+                            <td>60<br></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>nearestbedsensor</td>
+                            <td>-<br></td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>nearestlivingentitysensor</td>
+                            <td>-<br></td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>playersensor</td>
+                            <td>-<br></td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>secondarypoisensor</td>
+                            <td>-<br></td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>villagerbabiessensor</td>
+                            <td>-<br></td>
+                            <td>40</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center bg-dark" style="background: url(&quot;assets/img/haw.png&quot;) center / auto repeat;height: 103px;">
+        <div class="container text-white py-4 py-lg-5" style="height: 105px;padding-top: 2px !important;">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><a class="link-light" href="https://www.youtube.com/@Laika1" rel="author" style="opacity: 0.47;">Made with ♥ Laika</a></li>
+            </ul>
+            <p class="text-muted mb-0">Not affiliated with Mojang or Minecraft</p>
+            <p class="text-muted mb-0">COPYRIGHT © 2022 HYNSE. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>
